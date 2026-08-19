@@ -307,15 +307,19 @@ export const budgetExtras: BudgetExtra[] = [
 export type SocialLink = {
   label: string;
   href: string;
-  icon: "Terminal" | "AtSign" | "Briefcase" | "Camera";
+  icon: "Camera";
 };
 
 export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "#", icon: "Terminal" },
-  { label: "Twitter / X", href: "#", icon: "AtSign" },
-  { label: "LinkedIn", href: "#", icon: "Briefcase" },
-  { label: "Instagram", href: "#", icon: "Camera" },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/webcraftstudiosos",
+    icon: "Camera",
+  },
 ];
+
+export const whatsappNumber = "34617777453";
+export const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
 export const footerLinks: NavLink[] = [
   { label: "Servicios", href: "#servicios" },

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, Inter } from "next/font/google";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const sora = Sora({
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Saltar al contenido principal
         </a>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

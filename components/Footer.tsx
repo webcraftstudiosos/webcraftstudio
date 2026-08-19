@@ -1,12 +1,9 @@
-import { Terminal, AtSign, Briefcase, Camera, type LucideIcon } from "lucide-react";
+import { Camera, type LucideIcon } from "lucide-react";
 import { footerLinks, socialLinks, type SocialLink } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 
 const icons: Record<SocialLink["icon"], LucideIcon> = {
-  Terminal,
-  AtSign,
-  Briefcase,
   Camera,
 };
 
@@ -44,6 +41,8 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="flex size-10 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-border-strong hover:text-text"
                 >
