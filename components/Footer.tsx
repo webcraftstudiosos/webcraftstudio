@@ -1,10 +1,10 @@
-import { Camera, type LucideIcon } from "lucide-react";
 import { footerLinks, socialLinks, type SocialLink } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
-const icons: Record<SocialLink["icon"], LucideIcon> = {
-  Camera,
+const icons: Record<SocialLink["icon"], React.ComponentType<{ className?: string }>> = {
+  Instagram: InstagramIcon,
 };
 
 export function Footer() {
@@ -44,9 +44,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex size-10 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-border-strong hover:text-text"
+                  className="flex size-10 items-center justify-center rounded-full border border-border bg-surface transition-all duration-300 hover:border-border-strong hover:scale-105"
                 >
-                  <Icon className="size-4" aria-hidden="true" />
+                  <Icon className="size-6" />
                 </a>
               );
             })}

@@ -307,14 +307,14 @@ export const budgetExtras: BudgetExtra[] = [
 export type SocialLink = {
   label: string;
   href: string;
-  icon: "Camera";
+  icon: "Instagram";
 };
 
 export const socialLinks: SocialLink[] = [
   {
     label: "Instagram",
     href: "https://instagram.com/webcraftstudiosos",
-    icon: "Camera",
+    icon: "Instagram",
   },
 ];
 
