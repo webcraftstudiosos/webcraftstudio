@@ -51,7 +51,8 @@ const inputClasses =
 export function ContactForm() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function update<K extends keyof FormValues>(key: K, value: FormValues[K]) {
     setValues((prev) => ({ ...prev, [key]: value }));
@@ -65,9 +66,26 @@ export function ContactForm() {
     if (Object.keys(validationErrors).length > 0) return;
 
     setStatus("loading");
-    await new Promise((resolve) => setTimeout(resolve, 1400));
-    setStatus("success");
-    setValues(initialValues);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error ?? "No se pudo enviar el mensaje.");
+      }
+
+      setStatus("success");
+      setValues(initialValues);
+    } catch (err) {
+      setStatus("error");
+      setSubmitError(err instanceof Error ? err.message : "No se pudo enviar el mensaje.");
+    }
   }
 
   return (
@@ -243,6 +261,12 @@ export function ContactForm() {
                       </p>
                     )}
                   </div>
+
+                  {status === "error" && submitError && (
+                    <p role="alert" className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+                      {submitError}
+                    </p>
+                  )}
 
                   <motion.button
                     type="submit"

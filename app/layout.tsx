@@ -16,7 +16,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://webcraftstudios.dev";
+const siteUrl = "https://webcraftstudiosos.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
