@@ -179,7 +179,7 @@ export function ContactForm() {
                         value={values.phone}
                         onChange={(e) => update("phone", e.target.value)}
                         className={inputClasses}
-                        placeholder="+1 555 000 0000"
+                        placeholder="+34 600 000 000"
                       />
                     </div>
 
