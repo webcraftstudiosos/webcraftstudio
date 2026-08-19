@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? "webcraftstudiosos@gmail.com";
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? "contacto@webcraftstudiosos.com";
 
 type ContactPayload = {
   name: string;
