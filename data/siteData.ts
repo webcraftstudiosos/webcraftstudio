@@ -6,7 +6,7 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Portafolio", href: "#portafolio" },
+  { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
   { label: "Testimonios", href: "#testimonios" },
   { label: "Contacto", href: "#contacto" },
@@ -90,99 +90,50 @@ export const services: Service[] = [
   },
 ];
 
-export type ProjectCategory = "E-commerce" | "Web Apps" | "Landing Pages";
+export type ProcessIcon = "Search" | "PenTool" | "Code2" | "Rocket" | "LifeBuoy";
 
-export type Project = {
-  id: string;
+export type ProcessStep = {
+  number: string;
+  icon: ProcessIcon;
   title: string;
-  client: string;
-  category: ProjectCategory;
   description: string;
-  tags: string[];
-  gradient: string;
-  demoUrl: string;
-  caseStudyUrl: string;
 };
 
-export const projectCategories: ("Todos" | ProjectCategory)[] = [
-  "Todos",
-  "E-commerce",
-  "Web Apps",
-  "Landing Pages",
-];
-
-export const projects: Project[] = [
+export const processSteps: ProcessStep[] = [
   {
-    id: "nova-market",
-    title: "Nova Market",
-    client: "Nova Retail Group",
-    category: "E-commerce",
+    number: "01",
+    icon: "Search",
+    title: "Descubrimiento",
     description:
-      "Tienda en línea de alto tráfico con checkout optimizado y recomendaciones basadas en IA.",
-    tags: ["Next.js", "Stripe", "Tailwind CSS", "Sanity"],
-    gradient: "from-blue-500 to-cyan-400",
-    demoUrl: "#",
-    caseStudyUrl: "#",
+      "Analizamos tu negocio, objetivos y usuarios para definir el alcance exacto del proyecto.",
   },
   {
-    id: "orbit-crm",
-    title: "Orbit CRM",
-    client: "Orbit Software",
-    category: "Web Apps",
+    number: "02",
+    icon: "PenTool",
+    title: "Diseño",
     description:
-      "Plataforma SaaS de gestión de clientes con dashboards en tiempo real y automatización de flujos.",
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    gradient: "from-violet-500 to-fuchsia-400",
-    demoUrl: "#",
-    caseStudyUrl: "#",
+      "Creamos wireframes y un diseño UI/UX a medida, validado contigo antes de escribir una línea de código.",
   },
   {
-    id: "lumen-launch",
-    title: "Lumen Launch",
-    client: "Lumen Ventures",
-    category: "Landing Pages",
+    number: "03",
+    icon: "Code2",
+    title: "Desarrollo",
     description:
-      "Landing page de alta conversión para el lanzamiento de producto con animaciones cinematográficas.",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    gradient: "from-emerald-400 to-blue-500",
-    demoUrl: "#",
-    caseStudyUrl: "#",
+      "Construimos el sitio con tecnología moderna, código limpio y revisiones periódicas de avance.",
   },
   {
-    id: "urban-thread",
-    title: "Urban Thread",
-    client: "Urban Thread Co.",
-    category: "E-commerce",
+    number: "04",
+    icon: "Rocket",
+    title: "Lanzamiento",
     description:
-      "E-commerce de moda con probador virtual, filtros inteligentes y experiencia mobile-first.",
-    tags: ["Shopify Hydrogen", "React", "GSAP"],
-    gradient: "from-pink-500 to-orange-400",
-    demoUrl: "#",
-    caseStudyUrl: "#",
+      "Optimizamos rendimiento y SEO, y publicamos tu proyecto en producción sin sorpresas.",
   },
   {
-    id: "pulse-analytics",
-    title: "Pulse Analytics",
-    client: "Pulse Data Inc.",
-    category: "Web Apps",
+    number: "05",
+    icon: "LifeBuoy",
+    title: "Soporte",
     description:
-      "Dashboard analítico en tiempo real con visualizaciones interactivas para equipos de datos.",
-    tags: ["Next.js", "D3.js", "tRPC", "PostgreSQL"],
-    gradient: "from-indigo-500 to-purple-400",
-    demoUrl: "#",
-    caseStudyUrl: "#",
-  },
-  {
-    id: "aurora-summit",
-    title: "Aurora Summit",
-    client: "Aurora Events",
-    category: "Landing Pages",
-    description:
-      "Landing evento corporativo con registro en tiempo real e integración con pasarela de pagos.",
-    tags: ["Next.js", "Framer Motion", "Stripe"],
-    gradient: "from-cyan-400 to-violet-500",
-    demoUrl: "#",
-    caseStudyUrl: "#",
+      "Te acompañamos después del lanzamiento con mantenimiento, mejoras y soporte continuo.",
   },
 ];
 
@@ -323,7 +274,7 @@ export const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
 export const footerLinks: NavLink[] = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Portafolio", href: "#portafolio" },
+  { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
   { label: "Testimonios", href: "#testimonios" },
   { label: "Contacto", href: "#contacto" },
