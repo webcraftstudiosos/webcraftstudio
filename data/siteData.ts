@@ -8,7 +8,7 @@ export const navLinks: NavLink[] = [
   { label: "Servicios", href: "#servicios" },
   { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
-  { label: "Testimonios", href: "#testimonios" },
+  { label: "Garantías", href: "#garantias" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -137,69 +137,69 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
-export type Testimonial = {
-  name: string;
-  role: string;
-  company: string;
-  quote: string;
-  rating: number;
-  initials: string;
+export type TrustBadge = {
+  icon: "Code2" | "Clock" | "ShieldCheck" | "MessagesSquare";
+  title: string;
+  description: string;
 };
 
-export const testimonials: Testimonial[] = [
+export const trustBadges: TrustBadge[] = [
   {
-    name: "Marta Delgado",
-    role: "CEO",
-    company: "Nova Retail Group",
-    quote:
-      "Webcraft Studios transformó por completo nuestra tienda en línea. El equipo entendió nuestra visión desde el primer día y el resultado superó todas nuestras expectativas de conversión.",
-    rating: 5,
-    initials: "MD",
+    icon: "Code2",
+    title: "Stack moderno y escalable",
+    description:
+      "Next.js, TypeScript y Tailwind CSS: la misma tecnología que usan las plataformas más rápidas del mercado.",
   },
   {
-    name: "Carlos Iturbe",
-    role: "Fundador",
-    company: "Orbit Software",
-    quote:
-      "La calidad técnica y la atención al detalle son excepcionales. Nuestra plataforma nunca había sido tan rápida ni tan fácil de mantener.",
-    rating: 5,
-    initials: "CI",
+    icon: "Clock",
+    title: "Respuesta en menos de 24h",
+    description:
+      "Cada consulta se responde el mismo día hábil, sin esperas ni silencios.",
   },
   {
-    name: "Sofía Ramírez",
-    role: "Directora de Marketing",
-    company: "Lumen Ventures",
-    quote:
-      "El lanzamiento de nuestra landing page rompió récords de conversión. La comunicación fue impecable en cada etapa del proyecto.",
-    rating: 5,
-    initials: "SR",
+    icon: "ShieldCheck",
+    title: "Revisión post-lanzamiento incluida",
+    description:
+      "Ajustamos lo que haga falta después de publicar tu sitio, sin coste adicional.",
   },
   {
-    name: "Diego Fonseca",
-    role: "COO",
-    company: "Urban Thread Co.",
-    quote:
-      "Profesionales de verdad. Entregaron antes del plazo y con una calidad que ha elevado la percepción de nuestra marca.",
-    rating: 5,
-    initials: "DF",
+    icon: "MessagesSquare",
+    title: "Comunicación directa",
+    description:
+      "Hablas directamente con quien construye tu proyecto, sin intermediarios ni tickets perdidos.",
+  },
+];
+
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
+export const faqs: Faq[] = [
+  {
+    question: "¿El precio de la calculadora es el precio final?",
+    answer:
+      "Es una estimación orientativa basada en el alcance que indiques. La cotización final se confirma tras una breve llamada de descubrimiento donde afinamos los detalles de tu proyecto.",
   },
   {
-    name: "Valentina Cruz",
-    role: "Head of Product",
-    company: "Pulse Data Inc.",
-    quote:
-      "El dashboard que construyeron es una obra de arte funcional. Nuestros clientes lo destacan constantemente como diferenciador.",
-    rating: 5,
-    initials: "VC",
+    question: "¿Qué incluye el mantenimiento mensual?",
+    answer:
+      "Actualizaciones de seguridad, pequeños cambios de contenido, monitorización de rendimiento y soporte prioritario por email o WhatsApp.",
   },
   {
-    name: "Andrés Villalobos",
-    role: "Director de Eventos",
-    company: "Aurora Events",
-    quote:
-      "Desde la automatización de registros hasta el diseño, todo funcionó perfectamente el día del evento. Recomendados al 100%.",
-    rating: 5,
-    initials: "AV",
+    question: "¿Cuánto tarda en entregarse un proyecto?",
+    answer:
+      "Depende del alcance: una landing page suele tardar 1-2 semanas, una web de negocio local 3-5 semanas y un e-commerce 6-8 semanas.",
+  },
+  {
+    question: "¿Ofrecéis planes de pago?",
+    answer:
+      "Sí, normalmente dividimos el proyecto en un 50% al inicio y 50% al finalizar. Para proyectos más grandes podemos ajustar el calendario de pagos.",
+  },
+  {
+    question: "¿Puedo pedir cambios después del lanzamiento?",
+    answer:
+      "Por supuesto. Incluimos una ronda de ajustes tras el lanzamiento y, después, puedes contratar el mantenimiento mensual o solicitar mejoras puntuales.",
   },
 ];
 
@@ -280,8 +280,13 @@ export const footerLinks: NavLink[] = [
   { label: "Servicios", href: "#servicios" },
   { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
-  { label: "Testimonios", href: "#testimonios" },
+  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "Garantías", href: "#garantias" },
   { label: "Contacto", href: "#contacto" },
+];
+
+export const legalLinks: NavLink[] = [
+  { label: "Política de Privacidad", href: "/privacidad" },
 ];
 
 export const budgetRanges = [

@@ -1,4 +1,5 @@
-import { footerLinks, socialLinks, type SocialLink } from "@/data/siteData";
+import Link from "next/link";
+import { footerLinks, legalLinks, socialLinks, type SocialLink } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
@@ -55,7 +56,18 @@ export function Footer() {
 
         <div className="flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-xs text-text-faint sm:flex-row sm:items-center">
           <p>&copy; {year} Webcraft Studios. Todos los derechos reservados.</p>
-          <p>Construido con Next.js, Tailwind CSS y Framer Motion.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-text-muted"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <span>Construido con Next.js, Tailwind CSS y Framer Motion.</span>
+          </div>
         </div>
       </Container>
     </footer>
