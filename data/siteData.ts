@@ -77,8 +77,11 @@ export const services: Service[] = [
   },
 ];
 
+export type ExampleIcon = "UtensilsCrossed" | "Scissors" | "ChefHat";
+
 export type ExampleProject = {
   id: string;
+  icon: ExampleIcon;
   category: string;
   name: string;
   location: string;
@@ -91,6 +94,7 @@ export type ExampleProject = {
 export const exampleProjects: ExampleProject[] = [
   {
     id: "food",
+    icon: "UtensilsCrossed",
     category: "Comida rápida · Pedidos online",
     name: "Sabor Kebab",
     location: "Montverd (Bages)",
@@ -106,6 +110,7 @@ export const exampleProjects: ExampleProject[] = [
   },
   {
     id: "beauty",
+    icon: "Scissors",
     category: "Peluquería · Reservas",
     name: "Estilistes Aroma",
     location: "Puigserra",
@@ -121,6 +126,7 @@ export const exampleProjects: ExampleProject[] = [
   },
   {
     id: "restaurant",
+    icon: "ChefHat",
     category: "Restauración · Presentación",
     name: "Cal Bernat",
     location: "Ejemplo genérico",

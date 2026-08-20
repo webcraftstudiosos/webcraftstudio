@@ -1,11 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
-import { exampleProjects } from "@/data/siteData";
+import { Check, UtensilsCrossed, Scissors, ChefHat, type LucideIcon } from "lucide-react";
+import { exampleProjects, type ExampleIcon } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
+
+const icons: Record<ExampleIcon, LucideIcon> = {
+  UtensilsCrossed,
+  Scissors,
+  ChefHat,
+};
 
 export function Examples() {
   return (
@@ -18,7 +24,9 @@ export function Examples() {
         />
 
         <div className="mt-14 grid w-full grid-cols-1 gap-6 lg:grid-cols-3">
-          {exampleProjects.map((project, index) => (
+          {exampleProjects.map((project, index) => {
+            const Icon = icons[project.icon];
+            return (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
@@ -28,27 +36,22 @@ export function Examples() {
             >
               <GlassCard className="flex h-full flex-col overflow-hidden">
                 <div
-                  className="relative flex h-40 flex-col justify-end gap-2 p-4"
+                  className="relative flex h-40 items-center justify-center"
                   style={{
-                    background: `linear-gradient(160deg, ${project.accentSoft}, ${project.accent}33)`,
+                    background: `radial-gradient(circle at 50% 40%, ${project.accent}40, ${project.accentSoft})`,
                   }}
                 >
-                  <div className="flex gap-1.5">
-                    <span className="size-2.5 rounded-full bg-white/20" />
-                    <span className="size-2.5 rounded-full bg-white/20" />
-                    <span className="size-2.5 rounded-full bg-white/20" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center gap-2">
-                    <span
-                      className="h-2.5 w-2/3 rounded-full"
-                      style={{ backgroundColor: project.accent }}
+                  <span
+                    className="flex size-20 items-center justify-center rounded-2xl ring-1 ring-inset ring-white/15"
+                    style={{ backgroundColor: `${project.accent}33` }}
+                  >
+                    <Icon
+                      className="size-10"
+                      style={{ color: project.accent }}
+                      strokeWidth={1.75}
+                      aria-hidden="true"
                     />
-                    <span className="h-2 w-1/2 rounded-full bg-white/25" />
-                    <span
-                      className="mt-1 h-6 w-24 rounded-full"
-                      style={{ backgroundColor: project.accent }}
-                    />
-                  </div>
+                  </span>
                 </div>
 
                 <div className="flex flex-1 flex-col gap-4 p-6">
@@ -81,7 +84,8 @@ export function Examples() {
                 </div>
               </GlassCard>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         <p className="mt-8 text-center text-xs text-text-faint">
