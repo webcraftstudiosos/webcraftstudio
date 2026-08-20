@@ -12,20 +12,6 @@ export const navLinks: NavLink[] = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-export type Stat = {
-  label: string;
-  value: number;
-  suffix: string;
-  prefix?: string;
-};
-
-export const heroStats: Stat[] = [
-  { label: "Proyectos entregados", value: 50, suffix: "+" },
-  { label: "Rendimiento Lighthouse", value: 99.9, suffix: "%" },
-  { label: "Satisfacción de clientes", value: 100, suffix: "%" },
-  { label: "Soporte post-lanzamiento", value: 24, suffix: "/7", prefix: "" },
-];
-
 export type ServiceIcon =
   | "Code2"
   | "Palette"

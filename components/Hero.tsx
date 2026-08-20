@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import { heroStats } from "@/data/siteData";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export function Hero() {
   return (
@@ -70,37 +68,6 @@ export function Hero() {
             Nuestro Proceso
           </Button>
         </motion.div>
-
-        <motion.dl
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="glass mt-20 grid w-full max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl sm:grid-cols-4"
-        >
-          {heroStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center gap-1.5 bg-bg/40 px-4 py-7"
-            >
-              <dt className="order-2 text-xs font-medium text-text-muted sm:text-sm">
-                {stat.label}
-              </dt>
-              <dd className="order-1 font-display text-3xl font-bold text-text sm:text-4xl">
-                <AnimatedCounter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  prefix={stat.prefix}
-                  decimals={stat.value % 1 !== 0 ? 1 : 0}
-                />
-                <span className="sr-only">
-                  {stat.prefix ?? ""}
-                  {stat.value}
-                  {stat.suffix}
-                </span>
-              </dd>
-            </div>
-          ))}
-        </motion.dl>
       </Container>
     </section>
   );
