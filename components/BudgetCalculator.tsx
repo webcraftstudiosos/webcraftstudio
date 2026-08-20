@@ -99,10 +99,10 @@ export function BudgetCalculator() {
               <div className="glass flex items-center justify-between rounded-2xl p-5">
                 <div>
                   <p className="font-medium text-text">
-                    {siteType.basePages} páginas incluidas + {extraPages} adicionales
+                    {siteType.basePages} {siteType.basePages === 1 ? "página incluida" : "páginas incluidas"} + {extraPages} {extraPages === 1 ? "adicional" : "adicionales"}
                   </p>
                   <p className="text-sm text-text-muted">
-                    Total: {totalPages} páginas · {formatCurrency(siteType.pricePerExtraPage)} por página extra
+                    Total: {totalPages} {totalPages === 1 ? "página" : "páginas"} · {formatCurrency(siteType.pricePerExtraPage)} por página extra
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
