@@ -85,7 +85,7 @@ export function BudgetCalculator() {
                     </div>
                     <p className="mt-1 text-sm text-text-muted">{type.description}</p>
                     <p className="mt-3 text-sm font-semibold text-primary-light">
-                      Desde {formatCurrency(type.basePrice)}
+                      {formatCurrency(type.basePrice)} - {formatCurrency(type.basePriceMax)}
                     </p>
                   </button>
                 ))}

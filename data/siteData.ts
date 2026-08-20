@@ -207,6 +207,7 @@ export type SiteType = {
   id: string;
   label: string;
   basePrice: number;
+  basePriceMax: number;
   basePages: number;
   pricePerExtraPage: number;
   description: string;
@@ -216,15 +217,17 @@ export const siteTypes: SiteType[] = [
   {
     id: "landing",
     label: "Landing Page",
-    basePrice: 900,
+    basePrice: 400,
+    basePriceMax: 600,
     basePages: 1,
     pricePerExtraPage: 150,
     description: "Página única de alta conversión.",
   },
   {
     id: "corporate",
-    label: "Sitio Corporativo",
-    basePrice: 1800,
+    label: "Web Negocio Local",
+    basePrice: 800,
+    basePriceMax: 1200,
     basePages: 5,
     pricePerExtraPage: 180,
     description: "Sitio institucional multi-página.",
@@ -232,7 +235,8 @@ export const siteTypes: SiteType[] = [
   {
     id: "ecommerce",
     label: "E-commerce",
-    basePrice: 3200,
+    basePrice: 1800,
+    basePriceMax: 2200,
     basePages: 8,
     pricePerExtraPage: 220,
     description: "Tienda en línea completa.",
