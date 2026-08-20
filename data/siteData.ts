@@ -46,7 +46,7 @@ export const services: Service[] = [
     description:
       "Aplicaciones web robustas y escalables construidas con las tecnologías más modernas del ecosistema JavaScript.",
     features: [
-      "Next.js, React & TypeScript",
+      "Tecnología moderna y rápida",
       "APIs REST y GraphQL",
       "Bases de datos e integraciones",
       "Arquitectura escalable en la nube",
@@ -146,9 +146,9 @@ export type TrustBadge = {
 export const trustBadges: TrustBadge[] = [
   {
     icon: "Code2",
-    title: "Stack moderno y escalable",
+    title: "Tecnología rápida y fiable",
     description:
-      "Next.js, TypeScript y Tailwind CSS: la misma tecnología que usan las plataformas más rápidas del mercado.",
+      "Tu web o tienda carga rápido, funciona bien en el móvil y no depende de plugins que se rompen o se quedan anticuados.",
   },
   {
     icon: "Clock",

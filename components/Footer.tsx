@@ -66,7 +66,6 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
-            <span>Construido con Next.js, Tailwind CSS y Framer Motion.</span>
           </div>
         </div>
       </Container>
