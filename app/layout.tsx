@@ -26,15 +26,14 @@ export const metadata: Metadata = {
     template: "%s — Webcraft Studios",
   },
   description:
-    "Agencia de desarrollo y diseño web premium. Creamos sitios y aplicaciones a medida con Next.js, UI/UX de alto impacto, SEO técnico y automatizaciones que elevan tu presencia digital.",
+    "Diseñamos y creamos páginas web y tiendas online para negocios locales y online. Sitios rápidos, fáciles de gestionar y pensados para conseguir más clientes.",
   keywords: [
-    "agencia web",
-    "desarrollo web",
-    "diseño UI/UX",
-    "Next.js",
-    "desarrollo full-stack",
-    "SEO técnico",
-    "automatizaciones",
+    "diseño web",
+    "página web para negocios",
+    "tienda online",
+    "web para negocio local",
+    "creación de páginas web",
+    "posicionamiento en Google",
   ],
   authors: [{ name: "Webcraft Studios" }],
   creator: "Webcraft Studios",
@@ -45,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Webcraft Studios",
     title: "Webcraft Studios — Desarrollo y Diseño Web de Alto Nivel",
     description:
-      "Elevamos tu presencia digital al siguiente nivel: desarrollo full-stack, diseño UI/UX y optimización de rendimiento.",
+      "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Webcraft Studios — Desarrollo y Diseño Web de Alto Nivel",
     description:
-      "Elevamos tu presencia digital al siguiente nivel: desarrollo full-stack, diseño UI/UX y optimización de rendimiento.",
+      "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
   },
   robots: {
     index: true,

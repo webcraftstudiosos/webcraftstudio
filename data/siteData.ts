@@ -112,7 +112,7 @@ export const processSteps: ProcessStep[] = [
     icon: "PenTool",
     title: "Diseño",
     description:
-      "Creamos wireframes y un diseño UI/UX a medida, validado contigo antes de escribir una línea de código.",
+      "Creamos el diseño de tu web a medida y lo validamos contigo antes de empezar a construirla.",
   },
   {
     number: "03",
@@ -126,7 +126,7 @@ export const processSteps: ProcessStep[] = [
     icon: "Rocket",
     title: "Lanzamiento",
     description:
-      "Optimizamos rendimiento y SEO, y publicamos tu proyecto en producción sin sorpresas.",
+      "Optimizamos la velocidad y el posicionamiento en Google, y publicamos tu web sin sorpresas.",
   },
   {
     number: "05",
@@ -254,8 +254,8 @@ export const budgetExtras: BudgetExtra[] = [
   { id: "seo", label: "SEO Avanzado", price: 400, description: "Estrategia técnica y de contenido." },
   { id: "admin", label: "Panel de Administración", price: 900, description: "Gestión de contenido a medida." },
   { id: "i18n", label: "Multi-idioma", price: 500, description: "Soporte para múltiples idiomas." },
-  { id: "api", label: "Integraciones API", price: 700, description: "Conexión con servicios externos." },
-  { id: "uiux", label: "Diseño UI/UX Premium", price: 1200, description: "Sistema de diseño exclusivo." },
+  { id: "api", label: "Conexión con otras herramientas", price: 700, description: "Reservas, facturación, CRM u otros servicios que ya uses." },
+  { id: "uiux", label: "Diseño premium a medida", price: 1200, description: "Un diseño exclusivo y cuidado al detalle." },
   { id: "maintenance", label: "Mantenimiento Mensual", price: 90, description: "Soporte y actualizaciones continuas." },
 ];
 

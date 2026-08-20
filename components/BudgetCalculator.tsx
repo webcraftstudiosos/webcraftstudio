@@ -209,7 +209,7 @@ export function BudgetCalculator() {
                   <AnimatedPrice value={total} className="text-gradient" />
                 </p>
                 <p className="mt-1 text-xs text-text-faint">
-                  Precio estimado. La cotización final se confirma tras el brief.
+                  Precio estimado. La cotización final se confirma después de hablar contigo sobre tu proyecto.
                 </p>
               </div>
 
