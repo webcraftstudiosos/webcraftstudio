@@ -22,8 +22,8 @@ const siteUrl = "https://webcraftstudiosos.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Webcraft Studios — Desarrollo y Diseño Web de Alto Nivel",
-    template: "%s — Webcraft Studios",
+    default: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
+    template: "%s — WebcraftStudioSOS",
   },
   description:
     "Diseñamos y creamos páginas web y tiendas online para negocios locales y online. Sitios rápidos, fáciles de gestionar y pensados para conseguir más clientes.",
@@ -35,20 +35,20 @@ export const metadata: Metadata = {
     "creación de páginas web",
     "posicionamiento en Google",
   ],
-  authors: [{ name: "Webcraft Studios" }],
-  creator: "Webcraft Studios",
+  authors: [{ name: "WebcraftStudioSOS" }],
+  creator: "WebcraftStudioSOS",
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: siteUrl,
-    siteName: "Webcraft Studios",
-    title: "Webcraft Studios — Desarrollo y Diseño Web de Alto Nivel",
+    siteName: "WebcraftStudioSOS",
+    title: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
     description:
       "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Webcraft Studios — Desarrollo y Diseño Web de Alto Nivel",
+    title: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
     description:
       "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
   },

@@ -33,7 +33,7 @@ export function Hero() {
           className="mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-light"
         >
           <Sparkles className="size-3.5" aria-hidden="true" />
-          Desarrollo &amp; Diseño Web Premium
+          Páginas Web y Tiendas Online
         </motion.div>
 
         <motion.h1
@@ -42,8 +42,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="max-w-4xl text-balance font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-text sm:text-6xl lg:text-7xl"
         >
-          Elevamos tu presencia digital{" "}
-          <span className="text-gradient">al siguiente nivel</span>
+          Tu negocio, con{" "}
+          <span className="text-gradient">una web que vende</span>
         </motion.h1>
 
         <motion.p
@@ -52,9 +52,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-2xl text-balance text-lg text-text-muted sm:text-xl"
         >
-          Diseñamos y desarrollamos sitios y aplicaciones web que combinan
-          estética de vanguardia, rendimiento impecable y resultados
-          medibles para marcas que quieren destacar.
+          Creamos páginas web y tiendas online para negocios locales y
+          online: rápidas, fáciles de gestionar y pensadas para conseguir
+          más clientes.
         </motion.p>
 
         <motion.div

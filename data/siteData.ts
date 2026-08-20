@@ -221,7 +221,7 @@ export const siteTypes: SiteType[] = [
     basePriceMax: 600,
     basePages: 1,
     pricePerExtraPage: 150,
-    description: "Página única de alta conversión.",
+    description: "Ideal para lanzar rápido y captar clientes.",
   },
   {
     id: "corporate",
@@ -230,7 +230,7 @@ export const siteTypes: SiteType[] = [
     basePriceMax: 1200,
     basePages: 5,
     pricePerExtraPage: 180,
-    description: "Sitio institucional multi-página.",
+    description: "Varias páginas para presentar bien tu negocio.",
   },
   {
     id: "ecommerce",
@@ -239,7 +239,7 @@ export const siteTypes: SiteType[] = [
     basePriceMax: 2200,
     basePages: 8,
     pricePerExtraPage: 220,
-    description: "Tienda en línea completa.",
+    description: "Vende tus productos online, con carrito y pagos incluidos.",
   },
 ];
 
@@ -251,9 +251,9 @@ export type BudgetExtra = {
 };
 
 export const budgetExtras: BudgetExtra[] = [
-  { id: "seo", label: "SEO Avanzado", price: 400, description: "Estrategia técnica y de contenido." },
-  { id: "admin", label: "Panel de Administración", price: 900, description: "Gestión de contenido a medida." },
-  { id: "i18n", label: "Multi-idioma", price: 500, description: "Soporte para múltiples idiomas." },
+  { id: "seo", label: "SEO Avanzado", price: 400, description: "Para aparecer antes en las búsquedas de Google." },
+  { id: "admin", label: "Panel de Administración", price: 900, description: "Para que edites tú mismo textos e imágenes, sin ayuda técnica." },
+  { id: "i18n", label: "Multi-idioma", price: 500, description: "Tu web disponible en varios idiomas." },
   { id: "api", label: "Conexión con otras herramientas", price: 700, description: "Reservas, facturación, CRM u otros servicios que ya uses." },
   { id: "uiux", label: "Diseño premium a medida", price: 1200, description: "Un diseño exclusivo y cuidado al detalle." },
   { id: "maintenance", label: "Mantenimiento Mensual", price: 90, description: "Soporte y actualizaciones continuas." },

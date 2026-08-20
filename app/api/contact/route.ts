@@ -47,10 +47,10 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
 
   const { error } = await resend.emails.send({
-    from: "Webcraft Studios <contacto@webcraftstudiosos.com>",
+    from: "WebcraftStudioSOS <contacto@webcraftstudiosos.com>",
     to: CONTACT_EMAIL,
     replyTo: email,
-    subject: `Nuevo mensaje de ${name} — Webcraft Studios`,
+    subject: `Nuevo mensaje de ${name} — WebcraftStudioSOS`,
     text: [
       `Nombre: ${name}`,
       `Email: ${email}`,

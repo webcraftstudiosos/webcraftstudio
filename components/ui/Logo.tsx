@@ -18,7 +18,7 @@ export function Logo({ className }: { className?: string }) {
         aria-hidden="true"
         priority
       />
-      Webcraft <span className="text-gradient">Studios</span>
+      WebcraftStudio<span className="text-gradient">SOS</span>
     </span>
   );
 }

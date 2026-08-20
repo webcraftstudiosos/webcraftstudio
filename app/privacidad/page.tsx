@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Política de Privacidad",
   description:
-    "Cómo Webcraft Studios recopila, usa y protege tus datos personales.",
+    "Cómo WebcraftStudioSOS recopila, usa y protege tus datos personales.",
   robots: { index: true, follow: true },
 };
 
@@ -14,7 +14,7 @@ const sections = [
   {
     title: "¿Quién es el responsable?",
     body: [
-      "Webcraft Studios es responsable del tratamiento de los datos personales que nos facilitas a través de este sitio web (webcraftstudiosos.com). Puedes contactarnos en contacto@webcraftstudiosos.com para cualquier duda relacionada con tus datos.",
+      "WebcraftStudioSOS es responsable del tratamiento de los datos personales que nos facilitas a través de este sitio web (webcraftstudiosos.com). Puedes contactarnos en contacto@webcraftstudiosos.com para cualquier duda relacionada con tus datos.",
     ],
   },
   {

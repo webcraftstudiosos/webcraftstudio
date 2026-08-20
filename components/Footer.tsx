@@ -18,8 +18,8 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <Logo />
             <p className="max-w-sm text-sm text-text-muted">
-              Agencia de desarrollo y diseño web. Creamos experiencias
-              digitales que combinan estética, rendimiento y resultados.
+              Creamos páginas web y tiendas online para negocios locales y
+              online, rápidas y fáciles de gestionar.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-xs text-text-faint sm:flex-row sm:items-center">
-          <p>&copy; {year} Webcraft Studios. Todos los derechos reservados.</p>
+          <p>&copy; {year} WebcraftStudioSOS. Todos los derechos reservados.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             {legalLinks.map((link) => (
               <Link

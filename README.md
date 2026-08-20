@@ -1,6 +1,6 @@
-# Webcraft Studios
+# WebcraftStudioSOS
 
-Sitio web de la agencia Webcraft Studios: desarrollo y diseño web premium.
+Sitio web de WebcraftStudioSOS: páginas web y tiendas online para negocios.
 
 ## Stack
 
