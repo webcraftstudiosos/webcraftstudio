@@ -2,18 +2,16 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Minus, Plus, Calculator } from "lucide-react";
+import { Calculator } from "lucide-react";
 import { webPackage, budgetExtras } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { AnimatedPrice } from "@/components/ui/AnimatedPrice";
-import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { formatCurrency, cn } from "@/lib/utils";
 
 export function BudgetCalculator() {
-  const [extraPages, setExtraPages] = useState(0);
   const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
 
   const extrasTotal = useMemo(
@@ -24,9 +22,7 @@ export function BudgetCalculator() {
     [selectedExtras]
   );
 
-  const pagesTotal = extraPages * webPackage.pricePerExtraPage;
-  const total = webPackage.basePrice + pagesTotal + extrasTotal;
-  const totalPages = webPackage.basePages + extraPages;
+  const total = webPackage.basePrice + extrasTotal;
 
   function toggleExtra(id: string) {
     setSelectedExtras((prev) =>
@@ -59,45 +55,7 @@ export function BudgetCalculator() {
 
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                1. Páginas
-              </h3>
-              <div className="glass flex items-center justify-between rounded-2xl p-5">
-                <div>
-                  <p className="font-medium text-text">
-                    {webPackage.basePages} {webPackage.basePages === 1 ? "página incluida" : "páginas incluidas"} + {extraPages} {extraPages === 1 ? "adicional" : "adicionales"}
-                  </p>
-                  <p className="text-sm text-text-muted">
-                    Total: {totalPages} {totalPages === 1 ? "página" : "páginas"} · {formatCurrency(webPackage.pricePerExtraPage)} por página extra
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setExtraPages((p) => Math.max(0, p - 1))}
-                    aria-label="Quitar página adicional"
-                    className="flex size-9 items-center justify-center rounded-full border border-border bg-bg/40 text-text transition-colors hover:border-border-strong hover:bg-surface-hover disabled:opacity-40"
-                    disabled={extraPages === 0}
-                  >
-                    <Minus className="size-4" aria-hidden="true" />
-                  </button>
-                  <span className="w-6 text-center">
-                    <AnimatedNumber value={extraPages} className="font-display font-bold text-text" />
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setExtraPages((p) => Math.min(30, p + 1))}
-                    aria-label="Añadir página adicional"
-                    className="flex size-9 items-center justify-center rounded-full border border-border bg-bg/40 text-text transition-colors hover:border-border-strong hover:bg-surface-hover"
-                  >
-                    <Plus className="size-4" aria-hidden="true" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                2. Extras
+                Extras
               </h3>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {budgetExtras.map((extra) => {
@@ -157,10 +115,6 @@ export function BudgetCalculator() {
                 <div className="flex items-center justify-between text-text-muted">
                   <dt>Paquete</dt>
                   <dd className="font-medium text-text">{webPackage.label}</dd>
-                </div>
-                <div className="flex items-center justify-between text-text-muted">
-                  <dt>Páginas</dt>
-                  <dd className="font-medium text-text">{totalPages}</dd>
                 </div>
                 <div className="flex items-center justify-between text-text-muted">
                   <dt>Extras</dt>

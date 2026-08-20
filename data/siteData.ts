@@ -193,8 +193,6 @@ export type WebPackage = {
   label: string;
   basePrice: number;
   basePriceMax: number;
-  basePages: number;
-  pricePerExtraPage: number;
   description: string;
 };
 
@@ -202,10 +200,8 @@ export const webPackage: WebPackage = {
   label: "Web Profesional",
   basePrice: 800,
   basePriceMax: 1200,
-  basePages: 5,
-  pricePerExtraPage: 180,
   description:
-    "Diseño a medida, hasta 5 páginas y todo lo necesario para presentar tu negocio online.",
+    "Diseño a medida, en una sola página, con todo lo necesario para presentar tu negocio online.",
 };
 
 export type BudgetExtra = {
