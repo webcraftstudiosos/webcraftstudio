@@ -189,7 +189,7 @@ export const faqs: Faq[] = [
   {
     question: "¿Cuánto tarda en entregarse un proyecto?",
     answer:
-      "Depende del alcance: una landing page suele tardar 1-2 semanas, una web de negocio local 3-5 semanas y un e-commerce 6-8 semanas.",
+      "Depende del alcance: una landing page suele tardar 4-7 días, una web de negocio local 7-9 días y un e-commerce 2-4 semanas.",
   },
   {
     question: "¿Ofrecéis planes de pago?",
