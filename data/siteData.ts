@@ -256,7 +256,7 @@ export const budgetExtras: BudgetExtra[] = [
   { id: "i18n", label: "Multi-idioma", price: 500, description: "Soporte para múltiples idiomas." },
   { id: "api", label: "Integraciones API", price: 700, description: "Conexión con servicios externos." },
   { id: "uiux", label: "Diseño UI/UX Premium", price: 1200, description: "Sistema de diseño exclusivo." },
-  { id: "maintenance", label: "Mantenimiento Mensual", price: 250, description: "Soporte y actualizaciones continuas." },
+  { id: "maintenance", label: "Mantenimiento Mensual", price: 90, description: "Soporte y actualizaciones continuas." },
 ];
 
 export type SocialLink = {
