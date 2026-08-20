@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Calculator } from "lucide-react";
+import { Calculator, Check } from "lucide-react";
 import { webPackage, budgetExtras } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -51,6 +51,14 @@ export function BudgetCalculator() {
                 </span>
               </div>
               <p className="mt-1 text-sm text-text-muted">{webPackage.description}</p>
+              <ul className="mt-4 grid grid-cols-1 gap-2 border-t border-border pt-4 sm:grid-cols-2">
+                {webPackage.includes.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-text-muted">
+                    <Check className="mt-0.5 size-4 shrink-0 text-primary-light" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div>

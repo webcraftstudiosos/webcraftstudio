@@ -194,6 +194,7 @@ export type WebPackage = {
   basePrice: number;
   basePriceMax: number;
   description: string;
+  includes: string[];
 };
 
 export const webPackage: WebPackage = {
@@ -202,6 +203,13 @@ export const webPackage: WebPackage = {
   basePriceMax: 1200,
   description:
     "Diseño a medida, en una sola página, con todo lo necesario para presentar tu negocio online.",
+  includes: [
+    "Diseño a medida para tu negocio",
+    "Formulario de contacto integrado",
+    "Optimizada para móvil y velocidad",
+    "Publicación y puesta en marcha incluida",
+    "Primera ronda de ajustes incluida",
+  ],
 };
 
 export type BudgetExtra = {
