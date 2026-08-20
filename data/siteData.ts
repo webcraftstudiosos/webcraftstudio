@@ -6,6 +6,7 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
+  { label: "Ejemplos", href: "#ejemplos" },
   { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
   { label: "Garantías", href: "#garantias" },
@@ -73,6 +74,65 @@ export const services: Service[] = [
       "Recordatorios y confirmaciones automáticas",
       "Informes claros de cómo va tu negocio",
     ],
+  },
+];
+
+export type ExampleProject = {
+  id: string;
+  category: string;
+  name: string;
+  location: string;
+  description: string;
+  features: string[];
+  accent: string;
+  accentSoft: string;
+};
+
+export const exampleProjects: ExampleProject[] = [
+  {
+    id: "food",
+    category: "Comida rápida · Pedidos online",
+    name: "Sabor Kebab",
+    location: "Montverd (Bages)",
+    description:
+      "Carta interactiva con opciones de salsa, tamaño y guarnición, carrito de pedido y envío directo por WhatsApp.",
+    features: [
+      "Carta con opciones configurables",
+      "Carrito con cálculo automático",
+      "Pedido enviado por WhatsApp",
+    ],
+    accent: "#e13a2e",
+    accentSoft: "#2a1310",
+  },
+  {
+    id: "beauty",
+    category: "Peluquería · Reservas",
+    name: "Estilistes Aroma",
+    location: "Puigserra",
+    description:
+      "Selección de servicios, calendario visual con días ocupados y de vacaciones, y solicitud de cita por WhatsApp.",
+    features: [
+      "Selección de servicios y precio",
+      "Calendario visual de disponibilidad",
+      "Solicitud de cita por WhatsApp",
+    ],
+    accent: "#c98a6b",
+    accentSoft: "#241a16",
+  },
+  {
+    id: "restaurant",
+    category: "Restauración · Presentación",
+    name: "Cal Bernat",
+    location: "Ejemplo genérico",
+    description:
+      "Web editorial con menú, precios y ambiente del local, pensada para transmitir confianza desde el primer vistazo.",
+    features: [
+      "Menú editorial con precios",
+      "Diseño elegante y de marca",
+      "Plantilla reutilizable para cualquier restaurante",
+    ],
+    accent: "#8f1d3a",
+    accentSoft: "#1f1013",
   },
 ];
 
@@ -247,6 +307,7 @@ export const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
 export const footerLinks: NavLink[] = [
   { label: "Servicios", href: "#servicios" },
+  { label: "Ejemplos", href: "#ejemplos" },
   { label: "Proceso", href: "#proceso" },
   { label: "Presupuesto", href: "#presupuesto" },
   { label: "Preguntas frecuentes", href: "#faq" },

@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
+import { Examples } from "@/components/Examples";
 import { Process } from "@/components/Process";
 import { BudgetCalculator } from "@/components/BudgetCalculator";
 import { FAQ } from "@/components/FAQ";
@@ -15,6 +16,7 @@ export default function Home() {
       <main id="main-content" className="flex-1">
         <Hero />
         <Services />
+        <Examples />
         <Process />
         <BudgetCalculator />
         <FAQ />
