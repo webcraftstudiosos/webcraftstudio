@@ -20,8 +20,8 @@ export function Services() {
       <Container className="flex flex-col items-center">
         <SectionHeading
           eyebrow="Servicios"
-          title="Todo lo que tu proyecto digital necesita"
-          description="Un equipo multidisciplinario que cubre cada etapa del desarrollo de tu producto, de principio a fin."
+          title="Todo lo que tu negocio necesita para vender online"
+          description="Nos encargamos de cada parte del proceso, del diseño al lanzamiento, para que tú te centres en tu negocio."
         />
 
         <div className="mt-14 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -42,50 +42,50 @@ export type Service = {
 export const services: Service[] = [
   {
     icon: "Code2",
-    title: "Desarrollo Full-stack",
+    title: "Tu web o tienda, hecha a medida",
     description:
-      "Aplicaciones web robustas y escalables construidas con las tecnologías más modernas del ecosistema JavaScript.",
+      "Creamos tu sitio o tienda online desde cero, con todo lo que necesitas para vender y atender a tus clientes.",
     features: [
-      "Tecnología moderna y rápida",
-      "APIs REST y GraphQL",
-      "Bases de datos e integraciones",
-      "Arquitectura escalable en la nube",
+      "Diseño a medida para tu negocio",
+      "Tienda online con pagos y pedidos",
+      "Conectada con WhatsApp, redes y reservas",
+      "Preparada para crecer sin rehacerla",
     ],
   },
   {
     icon: "Palette",
-    title: "Diseño UI/UX",
+    title: "Diseño pensado para tus clientes",
     description:
-      "Interfaces intuitivas y visualmente impactantes, diseñadas con investigación de usuario y sistemas de diseño consistentes.",
+      "Un sitio bonito y fácil de usar que transmite confianza y ayuda a tus clientes a encontrar lo que buscan.",
     features: [
-      "Wireframes y prototipos interactivos",
-      "Design systems escalables",
-      "Investigación y pruebas de usuario",
-      "Micro-interacciones y animación",
+      "Look profesional acorde a tu marca",
+      "Fácil de usar desde el móvil",
+      "Pensado para que compren o te contacten",
+      "Detalles que dan buena impresión",
     ],
   },
   {
     icon: "Gauge",
-    title: "Optimización SEO/Velocidad",
+    title: "Que te encuentren en Google",
     description:
-      "Sitios ultrarrápidos y optimizados para buscadores, listos para escalar tráfico sin perder rendimiento.",
+      "Sitios rápidos y optimizados para aparecer en las búsquedas de tus clientes, sin perderlos por una carga lenta.",
     features: [
-      "Core Web Vitals al 100%",
-      "SEO técnico y estructurado",
-      "Optimización de imágenes y assets",
-      "Auditorías de rendimiento continuas",
+      "Carga en segundos, incluso en el móvil",
+      "Optimizado para aparecer en Google",
+      "Fotos y contenido bien optimizados",
+      "Revisiones periódicas de rendimiento",
     ],
   },
   {
     icon: "Workflow",
-    title: "Automatizaciones",
+    title: "Menos tareas manuales para ti",
     description:
-      "Flujos de trabajo automatizados que conectan tus herramientas y eliminan tareas manuales repetitivas.",
+      "Conectamos tus herramientas para que reserves, factures o respondas a clientes sin hacerlo todo a mano.",
     features: [
-      "Integraciones entre plataformas",
-      "Chatbots e IA aplicada",
-      "Automatización de marketing",
-      "Reportes y dashboards en tiempo real",
+      "Conexión con WhatsApp, email y redes",
+      "Respuestas automáticas a clientes",
+      "Recordatorios y confirmaciones automáticas",
+      "Informes claros de cómo va tu negocio",
     ],
   },
 ];
