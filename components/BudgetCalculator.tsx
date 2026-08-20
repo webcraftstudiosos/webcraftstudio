@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { AnimatedPrice } from "@/components/ui/AnimatedPrice";
+import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { formatCurrency, cn } from "@/lib/utils";
 
 export function BudgetCalculator() {
@@ -115,8 +116,8 @@ export function BudgetCalculator() {
                   >
                     <Minus className="size-4" aria-hidden="true" />
                   </button>
-                  <span className="w-6 text-center font-display font-bold text-text" aria-live="polite">
-                    {extraPages}
+                  <span className="w-6 text-center">
+                    <AnimatedNumber value={extraPages} className="font-display font-bold text-text" />
                   </span>
                   <button
                     type="button"
