@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2, Send } from "lucide-react";
-import { budgetRanges, siteTypes } from "@/data/siteData";
+import { budgetRanges } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -13,7 +13,6 @@ type FormValues = {
   name: string;
   email: string;
   phone: string;
-  projectType: string;
   budget: string;
   message: string;
 };
@@ -24,7 +23,6 @@ const initialValues: FormValues = {
   name: "",
   email: "",
   phone: "",
-  projectType: siteTypes[0].label,
   budget: budgetRanges[0],
   message: "",
 };
@@ -202,42 +200,23 @@ export function ContactForm() {
                     </div>
 
                     <div>
-                      <label htmlFor="projectType" className="mb-1.5 block text-sm font-medium text-text">
-                        Tipo de proyecto
+                      <label htmlFor="budget" className="mb-1.5 block text-sm font-medium text-text">
+                        Presupuesto estimado
                       </label>
                       <select
-                        id="projectType"
-                        name="projectType"
-                        value={values.projectType}
-                        onChange={(e) => update("projectType", e.target.value)}
+                        id="budget"
+                        name="budget"
+                        value={values.budget}
+                        onChange={(e) => update("budget", e.target.value)}
                         className={cn(inputClasses, "appearance-none")}
                       >
-                        {siteTypes.map((type) => (
-                          <option key={type.id} value={type.label} className="bg-bg-alt">
-                            {type.label}
+                        {budgetRanges.map((range) => (
+                          <option key={range} value={range} className="bg-bg-alt">
+                            {range}
                           </option>
                         ))}
                       </select>
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="budget" className="mb-1.5 block text-sm font-medium text-text">
-                      Presupuesto estimado
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={values.budget}
-                      onChange={(e) => update("budget", e.target.value)}
-                      className={cn(inputClasses, "appearance-none")}
-                    >
-                      {budgetRanges.map((range) => (
-                        <option key={range} value={range} className="bg-bg-alt">
-                          {range}
-                        </option>
-                      ))}
-                    </select>
                   </div>
 
                   <div>

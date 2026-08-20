@@ -7,7 +7,6 @@ type ContactPayload = {
   name: string;
   email: string;
   phone?: string;
-  projectType: string;
   budget: string;
   message: string;
 };
@@ -32,7 +31,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
   }
 
-  const { name, email, phone, projectType, budget, message } = payload;
+  const { name, email, phone, budget, message } = payload;
 
   if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return NextResponse.json(
@@ -55,7 +54,6 @@ export async function POST(request: Request) {
       `Nombre: ${name}`,
       `Email: ${email}`,
       phone ? `Teléfono: ${phone}` : null,
-      projectType ? `Tipo de proyecto: ${projectType}` : null,
       budget ? `Presupuesto estimado: ${budget}` : null,
       "",
       "Mensaje:",

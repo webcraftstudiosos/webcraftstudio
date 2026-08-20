@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Minus, Plus, Check, Calculator } from "lucide-react";
-import { siteTypes, budgetExtras } from "@/data/siteData";
+import { Minus, Plus, Calculator } from "lucide-react";
+import { webPackage, budgetExtras } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -13,14 +13,8 @@ import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { formatCurrency, cn } from "@/lib/utils";
 
 export function BudgetCalculator() {
-  const [typeId, setTypeId] = useState(siteTypes[0].id);
   const [extraPages, setExtraPages] = useState(0);
   const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
-
-  const siteType = useMemo(
-    () => siteTypes.find((type) => type.id === typeId) ?? siteTypes[0],
-    [typeId]
-  );
 
   const extrasTotal = useMemo(
     () =>
@@ -30,9 +24,9 @@ export function BudgetCalculator() {
     [selectedExtras]
   );
 
-  const pagesTotal = extraPages * siteType.pricePerExtraPage;
-  const total = siteType.basePrice + pagesTotal + extrasTotal;
-  const totalPages = siteType.basePages + extraPages;
+  const pagesTotal = extraPages * webPackage.pricePerExtraPage;
+  const total = webPackage.basePrice + pagesTotal + extrasTotal;
+  const totalPages = webPackage.basePages + extraPages;
 
   function toggleExtra(id: string) {
     setSelectedExtras((prev) =>
@@ -51,59 +45,29 @@ export function BudgetCalculator() {
 
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_380px]">
           <div className="flex flex-col gap-8">
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                1. Tipo de sitio
-              </h3>
-              <div
-                className="grid grid-cols-1 gap-4 sm:grid-cols-2"
-                role="radiogroup"
-                aria-label="Tipo de sitio web"
-              >
-                {siteTypes.map((type) => (
-                  <button
-                    key={type.id}
-                    type="button"
-                    role="radio"
-                    aria-checked={typeId === type.id}
-                    onClick={() => setTypeId(type.id)}
-                    className={cn(
-                      "glass rounded-2xl p-5 text-left transition-all duration-300",
-                      typeId === type.id
-                        ? "border-primary-light/60 bg-surface-hover ring-2 ring-primary/50"
-                        : "hover:border-border-strong"
-                    )}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-display font-bold text-text">
-                        {type.label}
-                      </span>
-                      {typeId === type.id && (
-                        <span className="flex size-5 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary">
-                          <Check className="size-3.5 text-white" aria-hidden="true" />
-                        </span>
-                      )}
-                    </div>
-                    <p className="mt-1 text-sm text-text-muted">{type.description}</p>
-                    <p className="mt-3 text-sm font-semibold text-primary-light">
-                      {formatCurrency(type.basePrice)} - {formatCurrency(type.basePriceMax)}
-                    </p>
-                  </button>
-                ))}
+            <div className="glass rounded-2xl p-5">
+              <div className="flex items-center justify-between">
+                <span className="font-display font-bold text-text">
+                  {webPackage.label}
+                </span>
+                <span className="text-sm font-semibold text-primary-light">
+                  {formatCurrency(webPackage.basePrice)} - {formatCurrency(webPackage.basePriceMax)}
+                </span>
               </div>
+              <p className="mt-1 text-sm text-text-muted">{webPackage.description}</p>
             </div>
 
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                2. Páginas
+                1. Páginas
               </h3>
               <div className="glass flex items-center justify-between rounded-2xl p-5">
                 <div>
                   <p className="font-medium text-text">
-                    {siteType.basePages} {siteType.basePages === 1 ? "página incluida" : "páginas incluidas"} + {extraPages} {extraPages === 1 ? "adicional" : "adicionales"}
+                    {webPackage.basePages} {webPackage.basePages === 1 ? "página incluida" : "páginas incluidas"} + {extraPages} {extraPages === 1 ? "adicional" : "adicionales"}
                   </p>
                   <p className="text-sm text-text-muted">
-                    Total: {totalPages} {totalPages === 1 ? "página" : "páginas"} · {formatCurrency(siteType.pricePerExtraPage)} por página extra
+                    Total: {totalPages} {totalPages === 1 ? "página" : "páginas"} · {formatCurrency(webPackage.pricePerExtraPage)} por página extra
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -133,7 +97,7 @@ export function BudgetCalculator() {
 
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                3. Extras
+                2. Extras
               </h3>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {budgetExtras.map((extra) => {
@@ -191,8 +155,8 @@ export function BudgetCalculator() {
 
               <dl className="flex flex-col gap-2 text-sm">
                 <div className="flex items-center justify-between text-text-muted">
-                  <dt>Tipo de sitio</dt>
-                  <dd className="font-medium text-text">{siteType.label}</dd>
+                  <dt>Paquete</dt>
+                  <dd className="font-medium text-text">{webPackage.label}</dd>
                 </div>
                 <div className="flex items-center justify-between text-text-muted">
                   <dt>Páginas</dt>

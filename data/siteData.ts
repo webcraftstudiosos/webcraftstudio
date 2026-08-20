@@ -189,8 +189,7 @@ export const faqs: Faq[] = [
   },
 ];
 
-export type SiteType = {
-  id: string;
+export type WebPackage = {
   label: string;
   basePrice: number;
   basePriceMax: number;
@@ -199,35 +198,15 @@ export type SiteType = {
   description: string;
 };
 
-export const siteTypes: SiteType[] = [
-  {
-    id: "landing",
-    label: "Landing Page",
-    basePrice: 400,
-    basePriceMax: 600,
-    basePages: 1,
-    pricePerExtraPage: 150,
-    description: "Ideal para lanzar rápido y captar clientes.",
-  },
-  {
-    id: "corporate",
-    label: "Web Negocio Local",
-    basePrice: 800,
-    basePriceMax: 1200,
-    basePages: 5,
-    pricePerExtraPage: 180,
-    description: "Varias páginas para presentar bien tu negocio.",
-  },
-  {
-    id: "ecommerce",
-    label: "E-commerce",
-    basePrice: 1800,
-    basePriceMax: 2200,
-    basePages: 8,
-    pricePerExtraPage: 220,
-    description: "Vende tus productos online, con carrito y pagos incluidos.",
-  },
-];
+export const webPackage: WebPackage = {
+  label: "Web Profesional",
+  basePrice: 800,
+  basePriceMax: 1200,
+  basePages: 5,
+  pricePerExtraPage: 180,
+  description:
+    "Diseño a medida, hasta 5 páginas y todo lo necesario para presentar tu negocio online.",
+};
 
 export type BudgetExtra = {
   id: string;
