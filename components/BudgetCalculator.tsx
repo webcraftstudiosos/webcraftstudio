@@ -14,15 +14,16 @@ import { formatCurrency, cn } from "@/lib/utils";
 export function BudgetCalculator() {
   const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
 
-  const extrasTotal = useMemo(
-    () =>
-      budgetExtras
-        .filter((extra) => selectedExtras.includes(extra.id))
-        .reduce((sum, extra) => sum + extra.price, 0),
-    [selectedExtras]
-  );
+  const { setupExtras, monthlyExtras } = useMemo(() => {
+    const chosen = budgetExtras.filter((extra) => selectedExtras.includes(extra.id));
+    return {
+      setupExtras: chosen.filter((e) => !e.recurring).reduce((sum, e) => sum + e.price, 0),
+      monthlyExtras: chosen.filter((e) => e.recurring).reduce((sum, e) => sum + e.price, 0),
+    };
+  }, [selectedExtras]);
 
-  const total = webPackage.basePrice + extrasTotal;
+  const setupTotal = webPackage.setupPrice + setupExtras;
+  const monthlyTotal = webPackage.monthlyPrice + monthlyExtras;
 
   function toggleExtra(id: string) {
     setSelectedExtras((prev) =>
@@ -47,7 +48,7 @@ export function BudgetCalculator() {
                   {webPackage.label}
                 </span>
                 <span className="text-sm font-semibold text-primary-light">
-                  {formatCurrency(webPackage.basePrice)} - {formatCurrency(webPackage.basePriceMax)}
+                  {formatCurrency(webPackage.setupPrice)} alta + {formatCurrency(webPackage.monthlyPrice)}/mes
                 </span>
               </div>
               <p className="mt-1 text-sm text-text-muted">{webPackage.description}</p>
@@ -90,7 +91,7 @@ export function BudgetCalculator() {
                             {extra.label}
                           </span>
                           <span className="whitespace-nowrap text-xs font-semibold text-primary-light">
-                            +{formatCurrency(extra.price)}
+                            +{formatCurrency(extra.price)}{extra.recurring ? "/mes" : ""}
                           </span>
                         </span>
                         <span className="mt-0.5 block text-xs text-text-muted">
@@ -131,12 +132,17 @@ export function BudgetCalculator() {
               </dl>
 
               <div className="border-t border-border pt-5">
-                <p className="text-sm text-text-muted">Estimación total</p>
-                <p className="font-display text-4xl font-extrabold">
-                  <AnimatedPrice value={total} className="text-gradient" />
+                <p className="text-sm text-text-muted">Alta única</p>
+                <p className="font-display text-3xl font-extrabold">
+                  <AnimatedPrice value={setupTotal} className="text-gradient" />
                 </p>
-                <p className="mt-1 text-xs text-text-faint">
-                  Precio estimado. La cotización final se confirma después de hablar contigo sobre tu proyecto.
+                <p className="mt-4 text-sm text-text-muted">Cuota mensual</p>
+                <p className="font-display text-3xl font-extrabold">
+                  <AnimatedPrice value={monthlyTotal} className="text-gradient" />
+                  <span className="text-base font-semibold text-text-faint"> /mes</span>
+                </p>
+                <p className="mt-3 text-xs text-text-faint">
+                  Precio estimado. Sin permanencia. La cotización final se confirma después de hablar contigo sobre tu proyecto.
                 </p>
               </div>
 

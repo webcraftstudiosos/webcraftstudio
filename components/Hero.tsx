@@ -31,7 +31,7 @@ export function Hero() {
           className="mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-light"
         >
           <Sparkles className="size-3.5" aria-hidden="true" />
-          Páginas Web y Tiendas Online
+          Sistema de Reservas Online
         </motion.div>
 
         <motion.h1
@@ -40,8 +40,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="max-w-4xl text-balance font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-text sm:text-6xl lg:text-7xl"
         >
-          Tu negocio, con{" "}
-          <span className="text-gradient">una web que vende</span>
+          Que tus clientes reserven solos,{" "}
+          <span className="text-gradient">sin llamarte</span>
         </motion.h1>
 
         <motion.p
@@ -50,9 +50,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-2xl text-balance text-lg text-text-muted sm:text-xl"
         >
-          Creamos páginas web y tiendas online para negocios locales y
-          online: rápidas, fáciles de gestionar y pensadas para conseguir
-          más clientes.
+          Sistema de reservas online para peluquerías, clínicas, centros de
+          estética y fisioterapia: calendario con disponibilidad real,
+          recordatorios automáticos y menos ausencias.
         </motion.p>
 
         <motion.div

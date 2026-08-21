@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, UtensilsCrossed, Scissors, ChefHat, type LucideIcon } from "lucide-react";
+import { Check, Scissors, Stethoscope, Dumbbell, type LucideIcon } from "lucide-react";
 import { exampleProjects, type ExampleIcon } from "@/data/siteData";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 
 const icons: Record<ExampleIcon, LucideIcon> = {
-  UtensilsCrossed,
   Scissors,
-  ChefHat,
+  Stethoscope,
+  Dumbbell,
 };
 
 export function Examples() {
@@ -19,8 +19,8 @@ export function Examples() {
       <Container className="flex flex-col items-center">
         <SectionHeading
           eyebrow="Ejemplos"
-          title="Así de lejos podemos llegar con tu web"
-          description="Diseños de ejemplo pensados para negocios reales, mostrando lo que se puede construir según tu tipo de negocio."
+          title="Así de lejos podemos llegar con tus reservas"
+          description="Diseños de ejemplo para negocios de servicios: peluquerías, clínicas, centros deportivos y consultas que quieren dejar de gestionar citas por teléfono."
         />
 
         <div className="mt-14 grid w-full grid-cols-1 gap-6 lg:grid-cols-3">

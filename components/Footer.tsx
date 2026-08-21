@@ -18,8 +18,8 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <Logo />
             <p className="max-w-sm text-sm text-text-muted">
-              Creamos páginas web y tiendas online para negocios locales y
-              online, rápidas y fáciles de gestionar.
+              Sistema de reservas online para peluquerías, clínicas y centros
+              de estética: calendario real y menos ausencias.
             </p>
           </div>
 

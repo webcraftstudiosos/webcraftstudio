@@ -29,55 +29,55 @@ export type Service = {
 export const services: Service[] = [
   {
     icon: "Code2",
-    title: "Tu web o tienda, hecha a medida",
+    title: "Reservas 24 horas, sin llamadas",
     description:
-      "Creamos tu sitio o tienda online desde cero, con todo lo que necesitas para vender y atender a tus clientes.",
+      "Tus clientes reservan cita ellos mismos desde el móvil, a cualquier hora, sin que tengas que coger el teléfono.",
     features: [
-      "Diseño a medida para tu negocio",
-      "Tienda online con pagos y pedidos",
-      "Conectada con WhatsApp, redes y reservas",
-      "Preparada para crecer sin rehacerla",
-    ],
-  },
-  {
-    icon: "Palette",
-    title: "Diseño pensado para tus clientes",
-    description:
-      "Un sitio bonito y fácil de usar que transmite confianza y ayuda a tus clientes a encontrar lo que buscan.",
-    features: [
-      "Look profesional acorde a tu marca",
-      "Fácil de usar desde el móvil",
-      "Pensado para que compren o te contacten",
-      "Detalles que dan buena impresión",
+      "Reserva online en menos de 1 minuto",
+      "Disponible de día y de noche",
+      "Confirmación automática al cliente",
+      "Menos interrupciones durante el trabajo",
     ],
   },
   {
     icon: "Gauge",
-    title: "Que te encuentren en Google",
+    title: "Calendario con disponibilidad real",
     description:
-      "Sitios rápidos y optimizados para aparecer en las búsquedas de tus clientes, sin perderlos por una carga lenta.",
+      "Conectado a Google Calendar: bloquea automáticamente días ocupados, festivos y vacaciones. Sin dobles reservas.",
     features: [
-      "Carga en segundos, incluso en el móvil",
-      "Optimizado para aparecer en Google",
-      "Fotos y contenido bien optimizados",
-      "Revisiones periódicas de rendimiento",
+      "Sincronizado con tu Google Calendar",
+      "Bloqueo automático de días no laborables",
+      "Sin errores ni citas duplicadas",
+      "Gestiona varios profesionales si los tienes",
     ],
   },
   {
     icon: "Workflow",
-    title: "Menos tareas manuales para ti",
+    title: "Menos ausencias, más confirmaciones",
     description:
-      "Conectamos tus herramientas para que reserves, factures o respondas a clientes sin hacerlo todo a mano.",
+      "Recordatorios automáticos y solicitud de cita por WhatsApp, para que no se te olvide ni a ti ni al cliente.",
     features: [
-      "Conexión con WhatsApp, email y redes",
-      "Respuestas automáticas a clientes",
-      "Recordatorios y confirmaciones automáticas",
-      "Informes claros de cómo va tu negocio",
+      "Recordatorio automático antes de la cita",
+      "Solicitud y confirmación por WhatsApp",
+      "Menos citas perdidas por olvido",
+      "Historial de reservas siempre a mano",
+    ],
+  },
+  {
+    icon: "Palette",
+    title: "Presencia profesional en Google",
+    description:
+      "Una página con tus servicios, precios y valoraciones, pensada para que te encuentren y confíen en ti.",
+    features: [
+      "Look profesional acorde a tu marca",
+      "Servicios y precios siempre visibles",
+      "Optimizada para aparecer en Google",
+      "Pensada para convertir visitas en citas",
     ],
   },
 ];
 
-export type ExampleIcon = "UtensilsCrossed" | "Scissors" | "ChefHat";
+export type ExampleIcon = "Scissors" | "Stethoscope" | "Dumbbell";
 
 export type ExampleProject = {
   id: string;
@@ -92,22 +92,6 @@ export type ExampleProject = {
 };
 
 export const exampleProjects: ExampleProject[] = [
-  {
-    id: "food",
-    icon: "UtensilsCrossed",
-    category: "Comida rápida · Pedidos online",
-    name: "Sabor Kebab",
-    location: "Montverd (Bages)",
-    description:
-      "Carta interactiva con opciones de salsa, tamaño y guarnición, carrito de pedido y envío directo por WhatsApp.",
-    features: [
-      "Carta con opciones configurables",
-      "Carrito con cálculo automático",
-      "Pedido enviado por WhatsApp",
-    ],
-    accent: "#e13a2e",
-    accentSoft: "#2a1310",
-  },
   {
     id: "beauty",
     icon: "Scissors",
@@ -125,20 +109,36 @@ export const exampleProjects: ExampleProject[] = [
     accentSoft: "#241a16",
   },
   {
-    id: "restaurant",
-    icon: "ChefHat",
-    category: "Restauración · Presentación",
-    name: "Cal Bernat",
+    id: "clinic",
+    icon: "Stethoscope",
+    category: "Fisioterapia · Reservas",
+    name: "Clínica Vitalis",
+    location: "Roureda del Bages",
+    description:
+      "Reservas online con calendario de disponibilidad real, recordatorios automáticos y solicitud de cita por WhatsApp.",
+    features: [
+      "Calendario conectado a Google Calendar",
+      "Recordatorio automático antes de la cita",
+      "Solicitud de cita por WhatsApp",
+    ],
+    accent: "#3d8f7a",
+    accentSoft: "#10221d",
+  },
+  {
+    id: "gym",
+    icon: "Dumbbell",
+    category: "Centro deportivo · Reservas",
+    name: "Espai Nord",
     location: "Ejemplo genérico",
     description:
-      "Web editorial con menú, precios y ambiente del local, pensada para transmitir confianza desde el primer vistazo.",
+      "Reserva de clases y sesiones con plazas limitadas, calendario semanal y confirmación automática por WhatsApp.",
     features: [
-      "Menú editorial con precios",
-      "Diseño elegante y de marca",
-      "Plantilla reutilizable para cualquier restaurante",
+      "Reserva de plazas por clase",
+      "Calendario semanal siempre actualizado",
+      "Plantilla reutilizable para cualquier centro",
     ],
-    accent: "#8f1d3a",
-    accentSoft: "#1f1013",
+    accent: "#4d7fff",
+    accentSoft: "#131a2e",
   },
 ];
 
@@ -200,7 +200,7 @@ export const trustBadges: TrustBadge[] = [
     icon: "Code2",
     title: "Tecnología rápida y fiable",
     description:
-      "Tu web o tienda carga rápido, funciona bien en el móvil y no depende de plugins que se rompen o se quedan anticuados.",
+      "Tu web y tu calendario de reservas cargan rápido, funcionan bien en el móvil y no dependen de plugins que se rompen o se quedan anticuados.",
   },
   {
     icon: "Clock",
@@ -234,47 +234,47 @@ export const faqs: Faq[] = [
       "Es una estimación orientativa basada en el alcance que indiques. La cotización final se confirma tras una breve llamada de descubrimiento donde afinamos los detalles de tu proyecto.",
   },
   {
-    question: "¿Qué incluye el mantenimiento mensual?",
+    question: "¿Qué incluye la cuota mensual?",
     answer:
-      "Actualizaciones de seguridad, pequeños cambios de contenido, monitorización de rendimiento y soporte prioritario por email o WhatsApp.",
+      "El calendario de reservas conectado a Google Calendar, los recordatorios automáticos, hosting, actualizaciones de seguridad y soporte prioritario por WhatsApp.",
+  },
+  {
+    question: "¿Puedo cancelar la cuota mensual cuando quiera?",
+    answer:
+      "Sí. No hay permanencia. Si en algún momento decides dejarlo, cancelas y no se te cobra el mes siguiente.",
   },
   {
     question: "¿Cuánto tarda en entregarse un proyecto?",
     answer:
-      "Depende del alcance: una landing page suele tardar 4-7 días, una web de negocio local 7-9 días y un e-commerce 2-4 semanas.",
-  },
-  {
-    question: "¿Ofrecéis planes de pago?",
-    answer:
-      "Sí, normalmente dividimos el proyecto en un 50% al inicio y 50% al finalizar. Para proyectos más grandes podemos ajustar el calendario de pagos.",
+      "Normalmente entre 5 y 9 días desde que confirmamos el alcance, incluyendo la conexión con tu Google Calendar y las pruebas de reserva.",
   },
   {
     question: "¿Puedo pedir cambios después del lanzamiento?",
     answer:
-      "Por supuesto. Incluimos una ronda de ajustes tras el lanzamiento y, después, puedes contratar el mantenimiento mensual o solicitar mejoras puntuales.",
+      "Por supuesto. Incluimos una ronda de ajustes tras el lanzamiento, y la cuota mensual cubre pequeños cambios y soporte continuo.",
   },
 ];
 
 export type WebPackage = {
   label: string;
-  basePrice: number;
-  basePriceMax: number;
+  setupPrice: number;
+  monthlyPrice: number;
   description: string;
   includes: string[];
 };
 
 export const webPackage: WebPackage = {
-  label: "Web Profesional",
-  basePrice: 800,
-  basePriceMax: 1200,
+  label: "Sistema de Reservas",
+  setupPrice: 300,
+  monthlyPrice: 29,
   description:
-    "Diseño a medida, en una sola página, con todo lo necesario para presentar tu negocio online.",
+    "Web con reservas online, calendario de disponibilidad real y recordatorios automáticos.",
   includes: [
-    "Diseño a medida para tu negocio",
-    "Formulario de contacto integrado",
-    "Optimizada para móvil y velocidad",
-    "Publicación y puesta en marcha incluida",
-    "Primera ronda de ajustes incluida",
+    "Página con tus servicios y precios",
+    "Calendario conectado a Google Calendar",
+    "Solicitud de cita por WhatsApp",
+    "Recordatorios automáticos antes de cada cita",
+    "Hosting y mantenimiento incluidos",
   ],
 };
 
@@ -282,16 +282,17 @@ export type BudgetExtra = {
   id: string;
   label: string;
   price: number;
+  recurring: boolean;
   description: string;
 };
 
 export const budgetExtras: BudgetExtra[] = [
-  { id: "seo", label: "SEO Avanzado", price: 400, description: "Para aparecer antes en las búsquedas de Google." },
-  { id: "admin", label: "Panel de Administración", price: 900, description: "Para que edites tú mismo textos e imágenes, sin ayuda técnica." },
-  { id: "i18n", label: "Multi-idioma", price: 500, description: "Tu web disponible en varios idiomas." },
-  { id: "api", label: "Conexión con otras herramientas", price: 700, description: "Reservas, facturación, CRM u otros servicios que ya uses." },
-  { id: "uiux", label: "Diseño premium a medida", price: 1200, description: "Un diseño exclusivo y cuidado al detalle." },
-  { id: "maintenance", label: "Mantenimiento Mensual", price: 90, description: "Soporte y actualizaciones continuas." },
+  { id: "multiagenda", label: "Varios profesionales", price: 15, recurring: true, description: "Cada empleado con su propio calendario de reservas." },
+  { id: "deposito", label: "Cobro de señal online", price: 15, recurring: true, description: "Pide un pequeño depósito al reservar, para reducir ausencias." },
+  { id: "sms", label: "Recordatorios por SMS", price: 10, recurring: true, description: "Aviso por SMS 24h antes, además del WhatsApp." },
+  { id: "multiidioma", label: "Multi-idioma", price: 150, recurring: false, description: "Tu web disponible en varios idiomas." },
+  { id: "seo", label: "SEO Avanzado", price: 150, recurring: false, description: "Para aparecer antes en las búsquedas de Google." },
+  { id: "uiux", label: "Diseño premium a medida", price: 300, recurring: false, description: "Un diseño exclusivo y cuidado al detalle." },
 ];
 
 export type SocialLink = {
@@ -326,9 +327,8 @@ export const legalLinks: NavLink[] = [
 ];
 
 export const budgetRanges = [
-  "Menos de 1.000 €",
-  "1.000 € - 3.000 €",
-  "3.000 € - 6.000 €",
-  "6.000 € - 12.000 €",
-  "Más de 12.000 €",
+  "Solo el sistema básico (300 € + 29 €/mes)",
+  "Con algún extra (varios profesionales, señal online...)",
+  "Aún no lo tengo claro, quiero que me asesoréis",
+  "Tengo un proyecto más grande en mente",
 ];

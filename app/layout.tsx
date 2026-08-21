@@ -22,18 +22,18 @@ const siteUrl = "https://webcraftstudiosos.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
+    default: "WebcraftStudioSOS — Sistema de Reservas Online para Negocios de Servicios",
     template: "%s — WebcraftStudioSOS",
   },
   description:
-    "Diseñamos y creamos páginas web y tiendas online para negocios locales y online. Sitios rápidos, fáciles de gestionar y pensados para conseguir más clientes.",
+    "Sistema de reservas online para peluquerías, clínicas, centros de estética y fisioterapia. Calendario con disponibilidad real, recordatorios automáticos y menos ausencias.",
   keywords: [
-    "diseño web",
-    "página web para negocios",
-    "tienda online",
-    "web para negocio local",
-    "creación de páginas web",
-    "posicionamiento en Google",
+    "sistema de reservas online",
+    "reservas para peluquerías",
+    "reservas para clínicas",
+    "calendario de citas online",
+    "software de citas para negocios",
+    "página web con reservas",
   ],
   authors: [{ name: "WebcraftStudioSOS" }],
   creator: "WebcraftStudioSOS",
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: siteUrl,
     siteName: "WebcraftStudioSOS",
-    title: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
+    title: "WebcraftStudioSOS — Sistema de Reservas Online para Negocios de Servicios",
     description:
-      "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
+      "Que tus clientes reserven solos, sin llamarte. Calendario real, recordatorios automáticos y menos ausencias.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebcraftStudioSOS — Páginas Web y Tiendas Online para Negocios",
+    title: "WebcraftStudioSOS — Sistema de Reservas Online para Negocios de Servicios",
     description:
-      "Creamos tu web o tienda online: diseño a medida, rápida y lista para conseguir más clientes.",
+      "Que tus clientes reserven solos, sin llamarte. Calendario real, recordatorios automáticos y menos ausencias.",
   },
   robots: {
     index: true,
